@@ -1,0 +1,31 @@
+models:
+  - name: int_vendas__prep_produtos
+    description: Modelo que enriquece os dados de produto com categoria e fornecedor
+    columns:
+      - name: PK_PRODUTO
+        description: Identificador único do produto, utilizado como chave primária na tabela.
+        data_tests:
+          - unique
+          - not_null
+      - name: NM_PRODUTO
+        description: Nome descritivo do produto.
+      - name: QUANTIDADE_POR_UNIDADE
+        description: Informação sobre a quantidade do produto contida em cada unidade
+      - name: PRECO_POR_UNIDADE
+        description: Preço unitário do produto, utilizado para cálculo de vendas.
+      - name: UNIDADE_EM_ESTOQUE
+        description: Quantidade de unidades do produto disponíveis no estoque.
+      - name: UNIDADE_POR_PEDIDO
+        description: Quantidade mínima de unidades permitida por pedido.
+      - name: NIVEL_DE_PEDIDO
+        description: Nível crítico do estoque que dispara a necessidade de um novo pedido.
+      - name: EH_DISCONTINUADO
+        description: Indica se o produto foi descontinuado (1 para sim, 0 para não).
+      - name: NOME_CATEGORIA
+        description: Nome da categoria à qual o produto pertence
+      - name: NOME_FORNECEDOR
+        description: Nome do fornecedor do produto.
+      - name: CIDADE_FORNECEDOR
+        description: Cidade onde o fornecedor está localizado.
+      - name: PAIS_FORNECEDOR
+        description: País onde o fornecedor está localizado.
