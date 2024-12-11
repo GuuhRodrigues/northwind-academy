@@ -1,0 +1,9 @@
+models:
+  - name: int_vendas__metricas_de_vendas
+    description: Tabela intermediária para consolidar métricas relacionadas às vendas realizadas.
+    columns:
+      - name: PK_PEDIDO_ITEM
+        description: Identificador único do item do pedido, usado como chave primária na tabela.
+        data_tests:
+          - unique
+          - not_null
